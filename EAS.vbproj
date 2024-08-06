@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{6DDB0F76-C6D2-49B0-96D7-3AF06237EBB2}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>EAS</RootNamespace>
+    <AssemblyName>EAS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>EAS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>EAS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="IdentityFramework.Core, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\IdentityFramework.Core.2.3.1\lib\net45\IdentityFramework.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="IdentityFramework.EF, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\IdentityFramework.EntityFramework.2.3.1\lib\net45\IdentityFramework.EF.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.Identity.Core.2.2.4\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\adminattendance.aspx" />
+    <Content Include="admin\admincalendar.aspx" />
+    <Content Include="admin\adminnavfixedcalendar.html" />
+    <Content Include="admin\adminnavfixedscheduler.html" />
+    <Content Include="admin\adminpayroll.aspx" />
+    <Content Include="admin\admindashboard.aspx" />
+    <Content Include="admin\adminemployee.aspx" />
+    <Content Include="admin\adminnavfixedpayroll.html" />
+    <Content Include="admin\adminnavfixedclientsite.html" />
+    <Content Include="admin\adminnavfixeddashboard.html" />
+    <Content Include="admin\adminscheduler.aspx" />
+    <Content Include="admin\adminsettings.aspx" />
+    <Content Include="admin\admininvoices.aspx" />
+    <Content Include="admin\adminnavfixedattend.html" />
+    <Content Include="admin\adminnavfixedemployee.html" />
+    <Content Include="admin\adminnavfixedinvoices.html" />
+    <Content Include="admin\adminnavfixedsettings.html" />
+    <Content Include="admin\adminclient.aspx" />
+    <Content Include="admin\adminnavfixedclient.html" />
+    <Content Include="admin\adminclientsite.aspx" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\dataTables.bootstrap.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\LoginFormStyle.css" />
+    <Content Include="css\metisMenu.min.css" />
+    <Content Include="css\responsivetable.css" />
+    <Content Include="css\sb-admin-2.css" />
+    <Content Include="css\StyleSheet.css" />
+    <Content Include="employee\attendancelogs.aspx" />
+    <Content Include="employee\navfixedset.html" />
+    <Content Include="employee\navfixedattend.html" />
+    <Content Include="employee\navfixedprof.html" />
+    <Content Include="employee\Dashboard.aspx" />
+    <Content Include="employee\clock.html" />
+    <Content Include="employee\navfixed.html" />
+    <Content Include="employee\setting.aspx" />
+    <Content Include="employee\yourprofile.aspx" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="ForgotPassword.aspx" />
+    <Content Include="images\bg.jpg" />
+    <Content Include="images\bg2.jpeg" />
+    <Content Include="images\bg2.png" />
+    <Content Include="images\eyeball.png" />
+    <Content Include="images\green.png" />
+    <Content Include="images\noeyeball.png" />
+    <Content Include="images\red.png" />
+    <Content Include="images\refresh.png" />
+    <Content Include="images\save.png" />
+    <Content Include="js\metisMenu.min.js" />
+    <Content Include="js\responsivetable.js" />
+    <Content Include="js\sb-admin-2.js" />
+    <Content Include="LoginForm.aspx" />
+    <Content Include="Media\layout.css" />
+    <Content Include="Media\layout\header-in.png" />
+    <Content Include="Media\layout\header.png" />
+    <Content Include="Media\layout\home\event-calendar-asp.net-open-source-400plus.png" />
+    <Content Include="Media\layout\home\scheduler-asp.net-open-source-400.png" />
+    <Content Include="Media\layout\li.png" />
+    <Content Include="Media\layout\main.png" />
+    <Content Include="Media\layout\shadow.png" />
+    <Content Include="Media\linked\ajax-loader-round.gif" />
+    <Content Include="navfixed.html" />
+    <Content Include="Themes\calendar_g.css" />
+    <Content Include="Themes\calendar_green.css" />
+    <Content Include="Themes\calendar_traditional.css" />
+    <Content Include="Themes\calendar_transparent.css" />
+    <Content Include="Themes\calendar_white.css" />
+    <Content Include="Themes\scheduler_8.css" />
+    <Content Include="Themes\scheduler_green.css" />
+    <Content Include="Themes\scheduler_traditional.css" />
+    <Content Include="Themes\scheduler_transparent.css" />
+    <Content Include="Themes\scheduler_white.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin\adminattendance.aspx.designer.vb">
+      <DependentUpon>adminattendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\adminattendance.aspx.vb">
+      <DependentUpon>adminattendance.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="admin\admincalendar.aspx.designer.vb">
+      <DependentUpon>admincalendar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\admincalendar.aspx.vb">
+      <DependentUpon>admincalendar.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="admin\adminpayroll.aspx.designer.vb">
+      <DependentUpon>adminpayroll.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\adminpayroll.aspx.vb">
+      <DependentUpon>adminpayroll.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="admin\admindashboard.aspx.designer.vb">
+      <DependentUpon>admindashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\admindashboard.aspx.vb">
+      <DependentUpon>admindashboard.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="admin\adminemployee.aspx.designer.vb">
+      <DependentUpon>adminemployee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\adminemployee.aspx.vb">
+      <DependentUpon>adminemployee.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="admin\adminscheduler.aspx.designer.vb">
+      <DependentUpon>adminscheduler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\adminscheduler.aspx.vb">
+      <DependentUpon>adminscheduler.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="admin\adminsettings.aspx.designer.vb">
+      <DependentUpon>adminsettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\adminsettings.aspx.vb">
+      <DependentUpon>adminsettings.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="admin\admininvoices.aspx.designer.vb">
+      <DependentUpon>admininvoices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\admininvoices.aspx.vb">
+      <DependentUpon>admininvoices.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="admin\adminclient.aspx.designer.vb">
+      <DependentUpon>adminclient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\adminclient.aspx.vb">
+      <DependentUpon>adminclient.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="admin\adminclientsite.aspx.designer.vb">
+      <DependentUpon>adminclientsite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\adminclientsite.aspx.vb">
+      <DependentUpon>adminclientsite.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="employee\attendancelogs.aspx.designer.vb">
+      <DependentUpon>attendancelogs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employee\attendancelogs.aspx.vb">
+      <DependentUpon>attendancelogs.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="employee\Dashboard.aspx.designer.vb">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employee\Dashboard.aspx.vb">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="employee\setting.aspx.designer.vb">
+      <DependentUpon>setting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employee\setting.aspx.vb">
+      <DependentUpon>setting.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="employee\yourprofile.aspx.designer.vb">
+      <DependentUpon>yourprofile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employee\yourprofile.aspx.vb">
+      <DependentUpon>yourprofile.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.designer.vb">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.vb">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="LoginForm.aspx.designer.vb">
+      <DependentUpon>LoginForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.aspx.vb">
+      <DependentUpon>LoginForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resource1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resource1.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\dataTables.bootstrap.min.js" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DayPilotLite-5.0.308\Source\DayPilot.csproj">
+      <Project>{5d7983a4-ccff-46f6-920f-f184a031d7e1}</Project>
+      <Name>DayPilot</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:9681/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

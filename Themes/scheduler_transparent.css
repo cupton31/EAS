@@ -1,0 +1,209 @@
+﻿.scheduler_transparent_event 
+{
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+}
+.scheduler_transparent_event_inner  
+{
+	margin-right: 1px;
+	padding: 8px 4px 4px 4px;
+	font-size: 12px;
+	overflow: hidden;
+	
+	position: absolute;
+	top: 0px;
+	bottom: 1px;
+	left: 0px;
+	right: 0px;
+	
+	color: #000;
+	background: #47afff;
+	border: 1px solid #1066a8;
+}
+
+.scheduler_transparent_event_hover .scheduler_transparent_event_inner 
+{
+}
+
+.scheduler_transparent_event .scheduler_transparent_action:hover
+{
+	opacity: 1;
+	filter: none;
+}
+
+.scheduler_transparent_selected .scheduler_transparent_event_inner
+{
+	background: #ddd;
+}
+
+.scheduler_transparent_red .scheduler_transparent_event_inner 
+{
+	border: 1px solid #c00004;
+	background: #ab0000;
+	background: -moz-linear-gradient(
+		top,
+		#ff2819 0%,
+		#ab0000);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#ff2819),
+		to(#ab0000));
+	filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr="#ff2819", endColorStr="#ab0000");
+}
+
+.scheduler_transparent_main 
+{
+	border: 1px solid #999;
+}
+
+.scheduler_transparent_timeheader 
+{
+	cursor: default;
+	color: #666;
+}
+
+.scheduler_transparent_message
+{
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+
+	padding: 10px; 
+	color: #eeeeee;
+	background: #333;
+}
+
+.scheduler_transparent_timeheadergroup,
+.scheduler_transparent_timeheadercol
+{
+	color: #666;
+	background: #eeeeee;
+	
+	background: -moz-linear-gradient(
+		top,
+		#f3f3f3 0%,
+		#e9e9e9);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#f3f3f3),
+		to(#e9e9e9));
+	filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr="#f3f3f3", endColorStr="#e9e9e9");
+}
+
+.scheduler_transparent_rowheader,
+.scheduler_transparent_corner
+{
+	color: #666666;
+	background: #eeeeee;
+	
+	background: -moz-linear-gradient(
+		left,
+		#f3f3f3 0%,
+		#e9e9e9);
+	background: -webkit-gradient(
+		linear, left top, right top, 
+		from(#f3f3f3),
+		to(#e9e9e9));
+	filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr="#f3f3f3", endColorStr="#e9e9e9", GradientType=1);
+}
+
+.scheduler_transparent_rowheader_inner {
+  padding: 3px;
+}
+
+.scheduler_transparent_timeheadergroup_inner
+{
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	text-align: center;
+	border-right: 1px solid #999;
+	border-bottom: 1px solid #999;
+	text-align: center;
+}
+
+.scheduler_transparent_timeheadercol_inner
+{
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	text-align: center;
+	border-right: 1px solid #999;
+}
+
+.scheduler_transparent_cellcolumn 
+{
+	background: #fff;
+}
+
+.scheduler_transparent_cellparent {
+	background-color: #f8f8f8;
+}
+
+.scheduler_transparent_tree_image_no_children {
+	background-image: url('scheduler_transparent/tree_nochildren.png');
+}
+.scheduler_transparent_tree_image_expand {
+	background-image: url('scheduler_transparent/tree_expand.png');
+}
+.scheduler_transparent_tree_image_collapse {
+	background-image: url('scheduler_transparent/tree_collapse.png');
+}
+
+.scheduler_transparent_divider 
+{
+	background-color: #999;
+}
+
+.scheduler_transparent_divider_horizontal
+{
+	background-color: #999;
+}
+
+.scheduler_transparent_matrix_vertical_line 
+{
+	background-color: #eee;
+}
+
+.scheduler_transparent_matrix_vertical_break 
+{
+	background-color: #000;
+}
+
+.scheduler_transparent_matrix_horizontal_line 
+{
+	background-color: #eee;
+}
+
+.scheduler_transparent_resourcedivider 
+{
+	background-color: #999;
+}
+
+.scheduler_transparent_shadow_inner 
+{
+	background-color: #666666;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	height: 100%;
+}
+
+.scheduler_transparent_event_bar
+{
+	top: 3px;
+	left: 4px;
+	right: 4px;
+	height: 4px;
+
+	background-color: #8bceff;
+}
+
+.scheduler_transparent_event_bar_inner  
+{
+	position: absolute;
+	height: 4px;
+	background-color: #1066a8;
+}
